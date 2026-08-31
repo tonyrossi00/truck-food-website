@@ -742,26 +742,30 @@
         });
     });
 
-   // Form Submit handling per Netlify
-const quoteForm = document.getElementById('quoteForm');
+  const quoteForm = document.getElementById('quoteForm');
 const successMsg = document.getElementById('success');
 
 if (quoteForm) {
     quoteForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
+        // Raccoglie tutti i campi del form presi da name=""
         const formData = new FormData(quoteForm);
 
-        fetch('/', {
+        fetch(window.location.pathname, {
             method: 'POST',
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: new URLSearchParams(formData).toString()
         })
-        .then(() => {
-            successMsg.classList.remove('hidden');
-            quoteForm.reset();
+        .then((response) => {
+            if (response.ok) {
+                successMsg.classList.remove('hidden');
+                quoteForm.reset();
+            } else {
+                console.error('Errore durante il salvataggio:', response.statusText);
+            }
         })
-        .catch((error) => console.error('Errore nell\'invio:', error));
+        .catch((error) => console.error('Errore di connessione:', error));
     });
 }
 </script>
