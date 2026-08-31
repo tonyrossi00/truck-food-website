@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="StreetGourmet — Food Truck, Catering ed Eventi premium.">
-    <title>StreetGourmet — Food Truck & Catering</title>
+    <meta name="description" content="StreetGourmet — Eventi sul Fiume e Noleggio Food Truck Premium.">
+    <title>Eventi e Noleggio Food Truck Abruzzo</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -51,7 +51,7 @@
         .hero {
             background:
                 linear-gradient(90deg, rgba(5,5,4,.86) 0%, rgba(5,5,4,.60) 46%, rgba(5,5,4,.18) 100%),
-                url('https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?auto=format&fit=crop&w=2200&q=90')
+                url('img/tiristoro1.jpeg')
                 center/cover;
         }
 
@@ -121,6 +121,31 @@
         .faq.open .faq-body { max-height:300px; }
         .faq.open .faq-icon { transform:rotate(180deg); }
 
+        .label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.375rem;
+            color: var(--ink);
+        }
+
+        .field {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            border: 1px solid rgba(11,11,10,0.15);
+            background-color: #faf8f5;
+            font-size: 0.875rem;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .field:focus {
+            border-color: var(--bronze);
+        }
+
         ::selection { background:var(--bronze); color:white; }
         ::-webkit-scrollbar { width:8px; }
         ::-webkit-scrollbar-track { background:var(--cream); }
@@ -142,14 +167,19 @@
 <!-- NAV -->
 <header id="navbar" class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-transparent text-white transition-all duration-500">
     <div class="max-w-7xl mx-auto px-5 lg:px-8 h-[78px] flex items-center justify-between">
-        <a href="#" class="flex items-center gap-3">
-            <span class="w-10 h-10 rounded-full bg-white text-ink flex items-center justify-center">
-                <i class="fa-solid fa-truck-fast text-sm"></i>
-            </span>
-            <span class="display text-2xl font-semibold tracking-tight">
-                STREET<span class="text-bronze">GOURMET</span>
-            </span>
-        </a>
+       <a href="#" class="flex items-center gap-3">
+    <span class="w-10 h-10 rounded-full bg-white text-ink flex items-center justify-center shrink-0">
+        <i class="fa-solid fa-truck-fast text-sm"></i>
+    </span>
+    <div class="flex flex-col leading-none">
+        <span class="display text-xl font-semibold tracking-tight">
+            Food<span class="text-bronze">TRUCK</span>
+        </span>
+        <span class="text-[11px] uppercase tracking-[.3em] text-white/60 font-bold mt-1">
+            Abruzzo
+        </span>
+    </div>
+</a>
 
         <nav class="hidden lg:flex items-center gap-8 text-[11px] font-bold uppercase tracking-[.22em]">
             <a href="#experience" class="hover:text-[#d7ab6c] transition">Experience</a>
@@ -179,19 +209,18 @@
         <div class="max-w-4xl reveal">
             <div class="flex items-center gap-3 mb-7">
                 <span class="w-10 h-px bg-bronze"></span>
-                <span class="text-[11px] font-bold uppercase tracking-[.28em] text-[#e0bd8a]">
-                    Food Truck · Catering · Events
+                <span class="text-[13px] font-bold uppercase tracking-[.28em] text-[#e0bd8a]">
+                     Noleggio Food Truck · Eventi sulla nostra località sul fiume
                 </span>
             </div>
 
             <h1 class="display text-5xl sm:text-7xl lg:text-[7rem] leading-[.91] font-medium tracking-tight">
                 Il tuo evento.<br>
-                <em class="text-[#d8ad70]">Il nostro spettacolo.</em>
+                <em class="text-[#d8ad70]">Scegliamo noi o dove vuoi tu.</em>
             </h1>
 
             <p class="max-w-2xl text-white/75 text-base lg:text-lg leading-relaxed mt-8">
-                Portiamo cucina, atmosfera e servizio direttamente nella tua location.
-                Feste private, matrimoni, eventi corporate e format su misura.
+                Organizza il tuo evento nella nostra location esclusiva in riva al fiume oppure noleggia il nostro Food Truck per portare cucina, stile e autonomia alla tua festa o evento aziendale.
             </p>
 
             <div class="flex flex-col sm:flex-row gap-3 mt-9">
@@ -200,22 +229,22 @@
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
                 <a href="#servizi" class="inline-flex items-center justify-center gap-3 glass px-7 py-4 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-white/15 transition">
-                    Scopri l'esperienza
+                    Scopri i format
                 </a>
             </div>
 
             <div class="grid grid-cols-3 gap-5 max-w-xl mt-16 pt-6 border-t border-white/20">
                 <div>
-                    <strong class="display text-3xl">150+</strong>
-                    <span class="block text-[10px] uppercase tracking-widest text-white/55 mt-1">Eventi</span>
+                    <strong class="display text-3xl">50+</strong>
+                    <span class="block text-[10px] uppercase tracking-widest text-white/55 mt-1">Eventi Realizzati</span>
                 </div>
                 <div>
-                    <strong class="display text-3xl">30–200</strong>
+                    <strong class="display text-3xl">30–100</strong>
                     <span class="block text-[10px] uppercase tracking-widest text-white/55 mt-1">Ospiti</span>
                 </div>
                 <div>
-                    <strong class="display text-3xl">220/380V</strong>
-                    <span class="block text-[10px] uppercase tracking-widest text-white/55 mt-1">Alimentazione</span>
+                    <strong class="display text-3xl">Dry & Full</strong>
+                    <span class="block text-[10px] uppercase tracking-widest text-white/55 mt-1">Formula Noleggio</span>
                 </div>
             </div>
         </div>
@@ -229,8 +258,8 @@
 <!-- MARQUEE -->
 <div class="bg-ink text-white overflow-hidden py-4 border-y border-white/10">
     <div class="marquee flex gap-10 text-[10px] font-bold uppercase tracking-[.3em] text-white/65">
-        <span>Street Food</span><span>✦</span><span>Catering</span><span>✦</span><span>Private Events</span><span>✦</span><span>Corporate</span><span>✦</span><span>Wedding</span><span>✦</span>
-        <span>Street Food</span><span>✦</span><span>Catering</span><span>✦</span><span>Private Events</span><span>✦</span><span>Corporate</span><span>✦</span><span>Wedding</span><span>✦</span>
+        <span>Location sul Fiume</span><span>✦</span><span>Noleggio Food Truck</span><span>✦</span><span>Feste Private</span><span>✦</span><span>Eventi Corporate</span><span>✦</span><span>Dry Hire</span><span>✦</span>
+        <span>Location sul Fiume</span><span>✦</span><span>Noleggio Food Truck</span><span>✦</span><span>Feste Private</span><span>✦</span><span>Eventi Corporate</span><span>✦</span><span>Dry Hire</span><span>✦</span>
     </div>
 </div>
 
@@ -241,32 +270,31 @@
             <div class="lg:col-span-5">
                 <span class="text-[10px] font-black uppercase tracking-[.28em] text-bronze">01 · Experience</span>
                 <h2 class="display text-4xl lg:text-6xl leading-tight mt-4">
-                    Non è solo<br><em>catering.</em>
+                    Un'atmosfera<br><em>unica.</em>
                 </h2>
                 <div class="w-20 h-px bg-bronze my-7"></div>
                 <p class="text-black/60 leading-8">
-                    Il truck diventa parte dell'evento. Una cucina professionale, un punto scenografico
-                    e un servizio pensato per far vivere agli ospiti qualcosa di diverso dal solito catering.
+                    Che si tratti di una serata estiva immersi nella natura in riva al fiume o del noleggio del nostro truck per una location privata, offriamo format flessibili pensati per rendere speciale ogni occasione.
                 </p>
             </div>
 
             <div class="lg:col-span-7 grid sm:grid-cols-2 gap-4">
                 <div class="image-card rounded-[2rem] h-[300px] sm:h-[430px]">
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1000&q=85" class="w-full h-full object-cover" alt="Evento food">
+                    <img src="img/truck2.png" class="w-full h-full object-cover" alt="Evento sul fiume">
                 </div>
                 <div class="grid gap-4">
                     <div class="bg-ink text-white rounded-[2rem] p-8 flex flex-col justify-between min-h-[205px]">
-                        <span class="text-bronze text-xl"><i class="fa-solid fa-star"></i></span>
+                        <span class="text-bronze text-xl"><i class="fa-solid fa-[#bd8740] fa-water"></i></span>
                         <div>
-                            <strong class="display text-3xl block">Design + Cucina</strong>
-                            <p class="text-white/50 text-sm mt-2">Il mezzo è parte integrante della scenografia.</p>
+                            <strong class="display text-3xl block">In Riva al Fiume</strong>
+                            <p class="text-white/50 text-sm mt-2">La nostra location estiva per serate, aperitivi ed eventi riservati.</p>
                         </div>
                     </div>
                     <div class="bg-white rounded-[2rem] p-8 soft-shadow border border-black/5 min-h-[205px] flex flex-col justify-between">
-                        <span class="text-bronze text-xl"><i class="fa-solid fa-fire-burner"></i></span>
+                        <span class="text-bronze text-xl"><i class="fa-solid fa-truck-front"></i></span>
                         <div>
-                            <strong class="display text-3xl block">Espresso, sempre.</strong>
-                            <p class="text-black/50 text-sm mt-2">Preparazioni espresse e servizio fluido per i tuoi ospiti.</p>
+                            <strong class="display text-3xl block">Noleggio Truck</strong>
+                            <p class="text-black/50 text-sm mt-2">Affitto del mezzo allestito e pronto per la tua location o il tuo brand.</p>
                         </div>
                     </div>
                 </div>
@@ -284,124 +312,190 @@
                 <h2 class="display text-4xl lg:text-6xl mt-3">Scegli il tuo <em>format.</em></h2>
             </div>
             <p class="max-w-md text-sm leading-7 text-black/55">
-                Dalla festa privata al roadshow aziendale: costruiamo il servizio intorno alla location,
-                al numero di invitati e al carattere dell'evento.
+                Mettiamo a disposizione la nostra location estiva sul fiume oppure offriamo il noleggio e l'affitto del nostro truck completamente attrezzato per il tuo evento.
             </p>
         </div>
 
         <div class="grid lg:grid-cols-3 gap-5">
             <article class="service-card bg-cream rounded-[2rem] overflow-hidden reveal">
                 <div class="image-card h-72">
-                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=85" class="w-full h-full object-cover" alt="Festa privata">
+                    <img src="img/truck1.png" class="w-full h-full object-cover" alt="Eventi sul Fiume">
                 </div>
                 <div class="p-8">
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-bronze">01 · Private</span>
-                    <h3 class="display text-3xl mt-3">Feste private</h3>
-                    <p class="text-sm text-black/55 leading-7 mt-4">Compleanni, feste in villa e occasioni speciali trasformate in un'esperienza street gourmet.</p>
-                    <a href="#preventivo" class="inline-flex items-center gap-3 mt-7 text-[10px] font-black uppercase tracking-widest">Scopri <i class="fa-solid fa-arrow-right"></i></a>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-bronze">01 · Location</span>
+                    <h3 class="display text-3xl mt-3">Eventi sul Fiume · solo estate</h3>
+                    <p class="text-sm text-black/55 leading-7 mt-4">Vivi l'esperienza del nostro punto ristoro estivo: aperitivi, feste private ed eventi in una cornice naturale suggestiva.</p>
+                    <a href="#preventivo" class="inline-flex items-center gap-3 mt-7 text-[10px] font-black uppercase tracking-widest">Prenota la location <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </article>
 
             <article class="service-card bg-ink text-white rounded-[2rem] overflow-hidden reveal">
                 <div class="image-card h-72">
-                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=85" class="w-full h-full object-cover" alt="Evento corporate">
+                    <img src="https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?auto=format&fit=crop&w=1000&q=85" class="w-full h-full object-cover" alt="Noleggio Food Truck">
                 </div>
                 <div class="p-8">
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-[#d7ab6c]">02 · Business</span>
-                    <h3 class="display text-3xl mt-3">Corporate</h3>
-                    <p class="text-sm text-white/55 leading-7 mt-4">Pranzi aziendali, team building, lanci prodotto e roadshow con servizio rapido e coordinato.</p>
-                    <a href="#preventivo" class="inline-flex items-center gap-3 mt-7 text-[10px] font-black uppercase tracking-widest text-[#d7ab6c]">Parliamone <i class="fa-solid fa-arrow-right"></i></a>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-[#d7ab6c]">02 · Rental</span>
+                    <h3 class="display text-3xl mt-3">Affitto & Noleggio Truck</h3>
+                    <p class="text-sm text-white/55 leading-7 mt-4">Noleggia il truck per il tuo evento privato, aziendale o brand activation. Disponibile in formula Dry Hire o con servizio.</p>
+                    <a href="#preventivo" class="inline-flex items-center gap-3 mt-7 text-[10px] font-black uppercase tracking-widest text-[#d7ab6c]">Richiedi il truck <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </article>
 
             <article class="service-card bg-cream rounded-[2rem] overflow-hidden reveal">
                 <div class="image-card h-72">
-                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=85" class="w-full h-full object-cover" alt="Wedding">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=85" class="w-full h-full object-cover" alt="Eventi su misura">
                 </div>
                 <div class="p-8">
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-bronze">03 · Wedding</span>
-                    <h3 class="display text-3xl mt-3">Wedding & After Party</h3>
-                    <p class="text-sm text-black/55 leading-7 mt-4">Snack di mezzanotte, street food e servizio notturno per chiudere la festa con stile.</p>
-                    <a href="#preventivo" class="inline-flex items-center gap-3 mt-7 text-[10px] font-black uppercase tracking-widest">Scopri <i class="fa-solid fa-arrow-right"></i></a>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-bronze">03 · Custom</span>
+                    <h3 class="display text-3xl mt-3">Corporate & Private</h3>
+                    <p class="text-sm text-black/55 leading-7 mt-4">Organizziamo eventi su misura in villa, in azienda o nelle tue location con la nostra cucina mobile e menù dedicati.</p>
+                    <a href="#preventivo" class="inline-flex items-center gap-3 mt-7 text-[10px] font-black uppercase tracking-widest">Personalizza <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </article>
         </div>
     </div>
 </section>
-
 <!-- TRUCK -->
 <section id="truck" class="py-24 lg:py-32 bg-ink text-white">
     <div class="max-w-7xl mx-auto px-5 lg:px-8">
         <div class="grid lg:grid-cols-12 gap-14 items-center">
-            <div class="lg:col-span-7 image-card rounded-[2.5rem] overflow-hidden reveal">
-                <img src="https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?auto=format&fit=crop&w=1400&q=90" class="w-full h-[520px] object-cover" alt="StreetGourmet Food Truck">
+            
+            <!-- IMMAGINE TRUCK -->
+            <div class="lg:col-span-6 image-card rounded-[2.5rem] overflow-hidden reveal">
+                <img src="img/truck1.png" class="w-full h-[580px] object-cover" alt="StreetGourmet Food Truck">
             </div>
 
-            <div class="lg:col-span-5 reveal">
+            <!-- CONTENUTO & SPECIFICHE -->
+            <div class="lg:col-span-6 reveal">
                 <span class="text-[10px] font-black uppercase tracking-[.28em] text-[#d7ab6c]">03 · Il Truck</span>
-                <h2 class="display text-4xl lg:text-6xl mt-4 leading-tight">Professionale.<br><em>Autonomo.</em></h2>
-                <p class="text-white/55 text-sm leading-7 mt-6">
-                    Una cucina mobile progettata per lavorare in modo efficiente durante eventi privati,
-                    aziendali e manifestazioni.
+                <h2 class="display text-4xl lg:text-5xl mt-3 leading-tight">Pronto al<br><em>noleggio.</em></h2>
+                <p class="text-white/55 text-sm leading-7 mt-4">
+                    Una cucina mobile professionale ed esteticamente curata nei minimi dettagli, completamente attrezzata e certificata per qualsiasi tipologia di evento.
                 </p>
 
-                <div class="mt-9 divide-y divide-white/10 border-y border-white/10">
-                    <div class="py-5 flex justify-between gap-6">
-                        <span class="text-sm">Cucina</span><span class="text-white/50 text-sm text-right">Acciaio inox professionale</span>
+                <!-- SPECIFICHE TECNICHE (GRID 2 COLONNE) -->
+                <div class="mt-8 grid sm:grid-cols-2 gap-x-8 border-t border-white/10 text-xs">
+                    
+                    <!-- COLONNA 1 -->
+                    <div class="divide-y divide-white/10">
+                        <div class="py-3.5 flex justify-between gap-4">
+                            <span class="text-white/50">Certificazioni</span>
+                            <span class="text-right font-medium text-white">Certificazione Europea</span>
+                        </div>
+                        <div class="py-3.5 flex justify-between gap-4">
+                            <span class="text-white/50">Impianto Elettrico</span>
+                            <span class="text-right font-medium text-white">Prese 220V / 380V</span>
+                        </div>
+                        <div class="py-3.5 flex justify-between gap-4">
+                            <span class="text-white/50">Generatore</span>
+                            <span class="text-right font-medium text-white">Inverter 6KW Silenziato</span>
+                        </div>
+                        <div class="py-3.5 flex justify-between gap-4">
+                            <span class="text-white/50">Banchi Lavoro</span>
+                            <span class="text-right font-medium text-white">Acciaio Inox Prof.</span>
+                        </div>
+                        <div class="py-3.5 flex justify-between gap-4">
+                            <span class="text-white/50">Refrigerazione</span>
+                            <span class="text-right font-medium text-white">2x Frigoriferi</span>
+                        </div>
                     </div>
-                    <div class="py-5 flex justify-between gap-6">
-                        <span class="text-sm">Energia</span><span class="text-white/50 text-sm text-right">Generatore inverter 6KW</span>
+
+                    <!-- COLONNA 2 -->
+                    <div class="divide-y divide-white/10 border-t sm:border-t-0 border-white/10">
+                        <div class="py-3.5 flex justify-between gap-4">
+                            <span class="text-white/50">Cottura Elettrica</span>
+                            <span class="text-right font-medium text-white">Forno Elettrico</span>
+                        </div>
+                        <div class="py-3.5 flex justify-between gap-4">
+                            <span class="text-white/50">Cottura Gas</span>
+                            <span class="text-right font-medium text-white">Forno a Gas</span>
+                        </div>
+                        <div class="py-3.5 flex justify-between gap-4">
+                            <span class="text-white/50">Aspirazione</span>
+                            <span class="text-right font-medium text-white">Cappa Aspirante</span>
+                        </div>
+                        <div class="py-3.5 flex justify-between gap-4">
+                            <span class="text-white/50">Impianto Idrico</span>
+                            <span class="text-right font-medium text-white">Taniche + Boiler Calda</span>
+                        </div>
+                        <div class="py-3.5 flex justify-between gap-4">
+                            <span class="text-white/50">Formula</span>
+                            <span class="text-right font-medium text-[#d7ab6c]">Dry Hire / Servito</span>
+                        </div>
                     </div>
-                    <div class="py-5 flex justify-between gap-6">
-                        <span class="text-sm">Alimentazione</span><span class="text-white/50 text-sm text-right">220V / 380V</span>
-                    </div>
-                    <div class="py-5 flex justify-between gap-6">
-                        <span class="text-sm">Refrigerazione</span><span class="text-white/50 text-sm text-right">Professionale</span>
-                    </div>
+
                 </div>
 
                 <a href="#preventivo" class="inline-flex items-center gap-4 bg-white text-ink px-7 py-4 rounded-full text-[10px] font-black uppercase tracking-widest mt-8 hover:bg-bronze hover:text-white transition">
-                    Richiedi scheda tecnica
+                    Richiedi scheda tecnica & noleggio
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
+
         </div>
     </div>
 </section>
 
-<!-- HOW IT WORKS -->
+<!-- HOW IT WORKS - OPTION 1: CARDS WITH ICONS -->
 <section class="py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-5 lg:px-8">
-        <div class="text-center max-w-2xl mx-auto reveal">
-            <span class="text-[10px] font-black uppercase tracking-[.28em] text-bronze">04 · Come funziona</span>
-            <h2 class="display text-4xl lg:text-6xl mt-3">Semplice, dall'idea<br><em>all'evento.</em></h2>
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 reveal">
+            <div>
+                <span class="text-[10px] font-black uppercase tracking-[.28em] text-bronze">04 · Processo</span>
+                <h2 class="display text-4xl lg:text-6xl mt-3">Come lavoriamo <em>insieme.</em></h2>
+            </div>
+            <p class="max-w-md text-sm text-black/55 leading-7">
+                Un percorso semplice e trasparente, dalla prima idea al giorno del tuo evento.
+            </p>
         </div>
 
-        <div class="grid md:grid-cols-4 gap-5 mt-16">
-            <div class="reveal border-t border-black/15 pt-6">
-                <span class="step-number">01</span>
-                <h3 class="font-bold mt-5">Raccontaci</h3>
-                <p class="text-sm text-black/50 leading-7 mt-3">Data, location, ospiti e tipo di evento.</p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-8 rounded-[2rem] soft-shadow border border-black/5 flex flex-col justify-between reveal">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-cream flex items-center justify-center text-bronze text-lg mb-6">
+                        <i class="fa-solid fa-[#bd8740] fa-sliders"></i>
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-black/40">Fase 01</span>
+                    <h3 class="display text-2xl font-semibold mt-2">Scegli la formula</h3>
+                    <p class="text-sm text-black/55 leading-relaxed mt-3">Location in riva al fiume o noleggio del food truck direttamente dove vuoi tu.</p>
+                </div>
             </div>
-            <div class="reveal border-t border-black/15 pt-6">
-                <span class="step-number">02</span>
-                <h3 class="font-bold mt-5">Progettiamo</h3>
-                <p class="text-sm text-black/50 leading-7 mt-3">Costruiamo menu e formula su misura.</p>
+
+            <div class="bg-white p-8 rounded-[2rem] soft-shadow border border-black/5 flex flex-col justify-between reveal">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-cream flex items-center justify-center text-bronze text-lg mb-6">
+                        <i class="fa-solid fa-[#bd8740] fa-[#bd8740] fa-clipboard-list"></i>
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-black/40">Fase 02</span>
+                    <h3 class="display text-2xl font-semibold mt-2">Definiamo i dettagli</h3>
+                    <p class="text-sm text-black/55 leading-relaxed mt-3">Personalizziamo date, numero di ospiti, opzioni menù o la formula Dry Hire.</p>
+                </div>
             </div>
-            <div class="reveal border-t border-black/15 pt-6">
-                <span class="step-number">03</span>
-                <h3 class="font-bold mt-5">Arriviamo</h3>
-                <p class="text-sm text-black/50 leading-7 mt-3">Portiamo truck, cucina e servizio nella tua location.</p>
+
+            <div class="bg-white p-8 rounded-[2rem] soft-shadow border border-black/5 flex flex-col justify-between reveal">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-cream flex items-center justify-center text-bronze text-lg mb-6">
+                        <i class="fa-solid fa-truck-ramp-box"></i>
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-black/40">Fase 03</span>
+                    <h3 class="display text-2xl font-semibold mt-2">Allestimento</h3>
+                    <p class="text-sm text-black/55 leading-relaxed mt-3">Ci occupiamo della logistica e della preparazione della location o del mezzo.</p>
+                </div>
             </div>
-            <div class="reveal border-t border-black/15 pt-6">
-                <span class="step-number">04</span>
-                <h3 class="font-bold mt-5">Tu vivi</h3>
-                <p class="text-sm text-black/50 leading-7 mt-3">Al cibo, al servizio e alla pulizia pensiamo noi.</p>
+
+            <div class="bg-white p-8 rounded-[2rem] soft-shadow border border-black/5 flex flex-col justify-between reveal">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-cream flex items-center justify-center text-bronze text-lg mb-6">
+                        <i class="fa-solid fa-glass-cheers"></i>
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-black/40">Fase 04</span>
+                    <h3 class="display text-2xl font-semibold mt-2">Ti godi l'evento</h3>
+                    <p class="text-sm text-black/55 leading-relaxed mt-3">Accogli i tuoi ospiti per un'esperienza originale, rilassata e d'impatto.</p>
+                </div>
             </div>
         </div>
     </div>
 </section>
-
 <!-- MENU -->
 <section id="menu" class="py-24 lg:py-32 bg-white">
     <div class="max-w-7xl mx-auto px-5 lg:px-8">
@@ -410,41 +504,39 @@
                 <span class="text-[10px] font-black uppercase tracking-[.28em] text-bronze">05 · Menu</span>
                 <h2 class="display text-4xl lg:text-6xl mt-3">Cucina <em>espresso.</em></h2>
             </div>
-            <p class="max-w-md text-sm text-black/50 leading-7">Alcune delle nostre specialità. Il menu può essere costruito e personalizzato per ogni evento.</p>
+            <p class="max-w-md text-sm text-black/50 leading-7">Le nostre proposte per serate ed eventi. Disponibili sul fiume o da abbinare al noleggio del truck.</p>
         </div>
 
         <div class="grid lg:grid-cols-3 gap-5">
             <article class="image-card menu-image rounded-[2rem] relative reveal">
-                <!-- <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1000&q=90" class="w-full h-full object-cover" alt="Burger gourmet"> -->
-                 <img src="img/porchetta.jpg" class="w-full h-full object-cover" alt="Burger gourmet">
+                <img src="img/porchetta.jpg" class="w-full h-full object-cover" alt="Panino Porchetta">
                 <div class="absolute inset-x-0 bottom-0 p-7 bg-gradient-to-t from-black/90 to-transparent pt-28 text-white">
                     <span class="text-[9px] uppercase tracking-widest text-[#d7ab6c]">Best seller</span>
                     <h3 class="display text-3xl mt-2">Panino porchetta - salsiccia e verdure</h3>
-                    <p class="text-xs text-white/65 mt-2">Hamburger · Salsiccia  · Pecora · Verdurine</p>
-                </div>
-                
-            </article>
-
-              <article class="image-card menu-image rounded-[2rem] relative reveal">
-                <img src="img/tagliereSalumiFormaggi.jpg" class="w-full h-full object-cover" alt="Fritti">
-                <div class="absolute inset-x-0 bottom-0 p-7 bg-gradient-to-t from-black/90 to-transparent pt-28 text-white">
-                    <span class="text-[9px] uppercase tracking-widest text-[#d7ab6c]">Finger food</span>
-                    <h3 class="display text-3xl mt-2">Tagliere salumi - formaggi </h3>
-                    <p class="text-xs text-white/65 mt-2">Culatello di Prosciutto · Pecorino · salumi · verdurine </p>
+                    <p class="text-xs text-white/65 mt-2">Hamburger · Salsiccia · Pecora · Verdurine</p>
                 </div>
             </article>
 
             <article class="image-card menu-image rounded-[2rem] relative reveal">
-                <img src="img/pinsa4gusti.jpg" class="w-full h-full object-cover" alt="Street food">
+                <img src="img/tagliereSalumiFormaggi.jpg" class="w-full h-full object-cover" alt="Tagliere Salumi">
+                <div class="absolute inset-x-0 bottom-0 p-7 bg-gradient-to-t from-black/90 to-transparent pt-28 text-white">
+                    <span class="text-[9px] uppercase tracking-widest text-[#d7ab6c]">Finger food</span>
+                    <h3 class="display text-3xl mt-2">Tagliere salumi - formaggi</h3>
+                    <p class="text-xs text-white/65 mt-2">Culatello di Prosciutto · Pecorino · Salumi · Verdurine</p>
+                </div>
+            </article>
+
+            <article class="image-card menu-image rounded-[2rem] relative reveal">
+                <img src="img/pinsa4gusti.jpg" class="w-full h-full object-cover" alt="Pizza ad alta idratazione">
                 <div class="absolute inset-x-0 bottom-0 p-7 bg-gradient-to-t from-black/90 to-transparent pt-28 text-white">
                     <span class="text-[9px] uppercase tracking-widest text-[#d7ab6c]">Slow cooking</span>
                     <h3 class="display text-3xl mt-2">Pizza ad alta idratazione</h3>
-                    <p class="text-xs text-white/65 mt-2">Pizza · Mozzarella · Salsiccia · Forno a legna </p>
+                    <p class="text-xs text-white/65 mt-2">Pizza · Mozzarella · Salsiccia · Forno a legna</p>
                 </div>
             </article>
         </div>
-    </div>
-            <!-- DIGITAL MENU CTA -->
+
+        <!-- DIGITAL MENU CTA -->
         <div class="mt-12 reveal">
             <div class="bg-ink text-white rounded-[2rem] px-7 py-8 md:px-10 md:py-9 flex flex-col md:flex-row items-center justify-between gap-7">
 
@@ -481,6 +573,7 @@
 
             </div>
         </div>
+    </div>
 </section>
 
 <!-- TESTIMONIAL -->
@@ -488,13 +581,11 @@
     <div class="max-w-5xl mx-auto px-5 text-center reveal">
         <div class="text-bronze text-xl mb-7">★★★★★</div>
         <blockquote class="display text-3xl lg:text-5xl leading-tight">
-            “Il punto forte del nostro compleanno. Cibo espresso delizioso,
-            servizio impeccabile e un truck che ha fatto scena per tutta la sera.”
+            “Abbiamo noleggiato il truck per una festa privata ed è stato un successo incredibile. Cibo ottimo, mezzo stupendo e massima professionalità.”
         </blockquote>
-        <p class="text-[10px] font-black uppercase tracking-[.25em] text-black/40 mt-8">Cliente StreetGourmet · Evento privato</p>
+        <p class="text-[10px] font-black uppercase tracking-[.25em] text-black/40 mt-8">Cliente StreetGourmet · Noleggio Truck</p>
     </div>
 </section>
-
 <!-- QUOTE -->
 <section id="preventivo" class="py-24 lg:py-32 bg-ink text-white">
     <div class="max-w-6xl mx-auto px-5 lg:px-8">
@@ -503,68 +594,70 @@
                 <span class="text-[10px] font-black uppercase tracking-[.28em] text-[#d7ab6c]">06 · Preventivo</span>
                 <h2 class="display text-4xl lg:text-6xl mt-4 leading-tight">Costruiamo<br><em>il tuo evento.</em></h2>
                 <p class="text-white/50 text-sm leading-7 mt-6">
-                    Raccontaci cosa hai in mente. Ti ricontatteremo con una proposta personalizzata.
+                    Raccontaci cosa hai in mente: un evento nella nostra location sul fiume o l'affitto del food truck? Ti ricontatteremo con una proposta personalizzata.
                 </p>
 
                 <div class="mt-10 space-y-4 text-sm text-white/65">
-                    <div class="flex gap-3"><i class="fa-solid fa-check text-bronze mt-1"></i> Menu personalizzabile</div>
-                    <div class="flex gap-3"><i class="fa-solid fa-check text-bronze mt-1"></i> Catering o Dry Hire</div>
-                    <div class="flex gap-3"><i class="fa-solid fa-check text-bronze mt-1"></i> Servizio per 30–200 ospiti</div>
+                    <div class="flex gap-3"><i class="fa-solid fa-check text-bronze mt-1"></i> Location estiva sul fiume disponibile</div>
+                    <div class="flex gap-3"><i class="fa-solid fa-check text-bronze mt-1"></i> Noleggio Food Truck (Dry Hire o Full Service)</div>
+                    <div class="flex gap-3"><i class="fa-solid fa-check text-bronze mt-1"></i> Adatto per 30–100 ospiti</div>
                 </div>
             </div>
 
             <div class="lg:col-span-3 reveal">
-                <form id="quoteForm" class="bg-white text-ink rounded-[2rem] p-7 md:p-9 space-y-5 shadow-2xl">
+                <!-- FORM AGGIORNATO PER NETLIFY -->
+                <form id="quoteForm" name="preventivi" method="POST" data-netlify="true" class="bg-white text-ink rounded-[2rem] p-7 md:p-9 space-y-5 shadow-2xl">
+                    <!-- Campo nascosto per Netlify -->
+                    <input type="hidden" name="form-name" value="preventivi" />
+
                     <div class="grid sm:grid-cols-2 gap-5">
                         <div>
                             <label class="label">Nome *</label>
-                            <input required type="text" placeholder="Mario Rossi" class="field">
+                            <input required type="text" name="nome" placeholder="Mario Rossi" class="field">
                         </div>
                         <div>
                             <label class="label">Telefono / Email *</label>
-                            <input required type="text" placeholder="333... / email" class="field">
+                            <input required type="text" name="contatto" placeholder="333... / email" class="field">
                         </div>
                     </div>
 
                     <div class="grid sm:grid-cols-2 gap-5">
                         <div>
-                            <label class="label">Tipo di evento</label>
-                            <select class="field">
-                                <option>Festa privata</option>
-                                <option>Corporate</option>
-                                <option>Wedding</option>
-                                <option>Dry Hire</option>
-                                <option>Festival / Altro</option>
+                            <label class="label">Servizio Richiesto</label>
+                            <select name="servizio" class="field">
+                                <option>Evento sul Fiume (Location)</option>
+                                <option>Affitto Food Truck (Dry Hire)</option>
+                                <option>Evento Corporate / Brand</option>
+                                <option>Altro</option>
                             </select>
                         </div>
                         <div>
-                            <label class="label">Ospiti</label>
-                            <select class="field">
-                                <option>Fino a 50</option>
-                                <option>50–100</option>
-                                <option>100–200</option>
-                                <option>Oltre 200</option>
+                            <label class="label">Ospiti Previsti</label>
+                            <select name="ospiti" class="field">
+                                <option>da 20 a 50</option>
+                                <option>da 50 a 100</option>
+                                <option>100+</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="grid sm:grid-cols-2 gap-5">
                         <div>
-                            <label class="label">Data</label>
-                            <input type="date" class="field">
+                            <label class="label">Data Evento</label>
+                            <input type="date" name="data_evento" class="field">
                         </div>
                         <div>
-                            <label class="label">Location</label>
-                            <input type="text" placeholder="Città / Location" class="field">
+                            <label class="label">Location (Se noleggio truck)</label>
+                            <input type="text" name="location" placeholder="Città / Indirizzo" class="field">
                         </div>
                     </div>
 
                     <div>
                         <label class="label">Raccontaci il progetto</label>
-                        <textarea rows="4" placeholder="Che evento stai organizzando?" class="field resize-none"></textarea>
+                        <textarea name="messaggio" rows="4" placeholder="Descrivi il tuo evento o le tue esigenze di noleggio..." class="field resize-none"></textarea>
                     </div>
 
-                    <button class="w-full bg-ink text-white hover:bg-bronze py-4 rounded-xl text-[10px] font-black uppercase tracking-[.2em] transition">
+                    <button type="submit" class="w-full bg-ink text-white hover:bg-bronze py-4 rounded-xl text-[10px] font-black uppercase tracking-[.2em] transition">
                         Invia richiesta <i class="fa-solid fa-arrow-right ml-2"></i>
                     </button>
 
@@ -576,7 +669,6 @@
         </div>
     </div>
 </section>
-
 <!-- FAQ -->
 <section id="faq" class="py-24 lg:py-32">
     <div class="max-w-4xl mx-auto px-5 lg:px-8">
@@ -588,31 +680,31 @@
         <div class="space-y-3">
             <div class="faq bg-white border border-black/10 rounded-2xl reveal">
                 <button class="faq-btn w-full px-6 py-5 flex justify-between items-center text-left font-bold text-sm">
-                    <span>Il truck è autonomo elettricamente?</span>
+                    <span>Come funziona l'affitto o noleggio del Food Truck?</span>
                     <i class="faq-icon fa-solid fa-chevron-down text-bronze transition-transform"></i>
                 </button>
                 <div class="faq-body px-6">
-                    <p class="text-sm text-black/55 leading-7 pb-6">Sì. Il mezzo dispone di un generatore silenziato incorporato; quando disponibile, può essere utilizzato anche l'allaccio elettrico della location.</p>
+                    <p class="text-sm text-black/55 leading-7 pb-6">Offriamo sia la formula "Dry Hire" (noleggio del solo mezzo attrezzato per il tuo personale/brand) sia il servizio completo comprensivo della nostra cucina ed eventuale staff per la somministrazione.</p>
                 </div>
             </div>
 
             <div class="faq bg-white border border-black/10 rounded-2xl reveal">
                 <button class="faq-btn w-full px-6 py-5 flex justify-between items-center text-left font-bold text-sm">
-                    <span>Possiamo personalizzare il menu?</span>
+                    <span>Possiamo organizzare una festa privata sul fiume?</span>
                     <i class="faq-icon fa-solid fa-chevron-down text-bronze transition-transform"></i>
                 </button>
                 <div class="faq-body px-6">
-                    <p class="text-sm text-black/55 leading-7 pb-6">Sì. La proposta gastronomica può essere adattata al tipo di evento, al numero di ospiti e alle esigenze della location.</p>
+                    <p class="text-sm text-black/55 leading-7 pb-6">Certamente! Durante la stagione estiva il nostro punto ristoro sul fiume è disponibile per ospitare feste ed eventi privati in una cornice naturale e riservata.</p>
                 </div>
             </div>
 
             <div class="faq bg-white border border-black/10 rounded-2xl reveal">
                 <button class="faq-btn w-full px-6 py-5 flex justify-between items-center text-left font-bold text-sm">
-                    <span>È possibile noleggiare solo il truck?</span>
+                    <span>Il truck è autonomo per quanto riguarda l'elettricità?</span>
                     <i class="faq-icon fa-solid fa-chevron-down text-bronze transition-transform"></i>
                 </button>
                 <div class="faq-body px-6">
-                    <p class="text-sm text-black/55 leading-7 pb-6">Sì, è disponibile la formula Dry Hire per chef, brand e agenzie, con durata e condizioni da definire in base al progetto.</p>
+                    <p class="text-sm text-black/55 leading-7 pb-6">Sì. Il mezzo è dotato di un generatore silenziato integrato da 6KW. Laddove disponibile nella tua location, è possibile collegarlo anche alla presa di rete (220V o 380V).</p>
                 </div>
             </div>
         </div>
@@ -620,98 +712,82 @@
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-ink text-white py-12">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8">
-        <div class="flex flex-col md:flex-row justify-between gap-8 items-start md:items-center">
-            <div>
-                <div class="display text-2xl">STREET<span class="text-bronze">GOURMET</span></div>
-                <p class="text-xs text-white/35 mt-2">Food Truck · Catering · Eventi</p>
-            </div>
-
-            <div class="flex gap-5 text-white/45">
-                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://wa.me/393330000000" class="hover:text-white transition"><i class="fa-brands fa-whatsapp"></i></a>
-            </div>
-
-            <a href="#preventivo" class="text-[10px] font-black uppercase tracking-widest border border-white/15 px-5 py-3 rounded-full hover:bg-white hover:text-ink transition">
-                Richiedi disponibilità
-            </a>
+<footer class="bg-ink text-white py-12 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-white/50">
+        <div class="flex items-center gap-3">
+            <span class="display text-lg font-semibold text-white tracking-tight">STREET<span class="text-bronze">GOURMET</span></span>
+            <span>© 2026 — tutti i diritti riservati</span>
         </div>
-
-        <div class="border-t border-white/10 mt-10 pt-6 text-[10px] text-white/25 flex flex-col sm:flex-row justify-between gap-2">
-            <span>© 2026 StreetGourmet. Tutti i diritti riservati.</span>
-            <span>Food Truck & Catering d'eccellenza</span>
+        <div class="flex gap-6">
+            <a href="#servizi" class="hover:text-white transition">Servizi</a>
+            <a href="#truck" class="hover:text-white transition">Il Truck</a>
+            <a href="#preventivo" class="hover:text-white transition">Preventivo</a>
         </div>
     </div>
 </footer>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/393330000000" target="_blank"
-   class="fixed right-5 bottom-5 z-50 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center text-2xl shadow-2xl hover:scale-110 transition-transform"
-   aria-label="Contattaci su WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
-</a>
-
-<style>
-    .label {
-        display:block;
-        font-size:10px;
-        font-weight:800;
-        text-transform:uppercase;
-        letter-spacing:.12em;
-        margin-bottom:8px;
-        color:rgba(11,11,10,.55);
-    }
-    .field {
-        width:100%;
-        background:#f8f6f1;
-        border:1px solid rgba(11,11,10,.10);
-        border-radius:12px;
-        padding:13px 14px;
-        font-size:13px;
-        outline:none;
-        transition:.25s;
-    }
-    .field:focus {
-        border-color:#bd8740;
-        box-shadow:0 0 0 3px rgba(189,135,64,.10);
-    }
-</style>
-
+<!-- SCRIPT PER INTERATTIVITA' (Scroll, Accordion FAQ, Form) -->
 <script>
-    const navbar = document.getElementById('navbar');
-
-    window.addEventListener('scroll', () => {
-        navbar.classList.toggle('nav-scrolled', window.scrollY > 40);
-    });
-
+    // Reveal Animations on Scroll
+    const observerOptions = { threshold: 0.15 };
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
-                setTimeout(() => entry.target.classList.add('visible'), index * 70);
-                observer.unobserve(entry.target);
+                entry.target.classList.add('visible');
             }
         });
-    }, { threshold: 0.12 });
+    }, observerOptions);
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    document.querySelectorAll('.faq-btn').forEach(button => {
-        button.addEventListener('click', () => {
-            const faq = button.closest('.faq');
-            document.querySelectorAll('.faq').forEach(item => {
-                if (item !== faq) item.classList.remove('open');
-            });
-            faq.classList.toggle('open');
+    // Navbar Background Change on Scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('nav-scrolled');
+        } else {
+            navbar.classList.remove('nav-scrolled');
+        }
+    });
+
+    // Accordion FAQ
+    document.querySelectorAll('.faq-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const faqContainer = btn.parentElement;
+            const isOpen = faqContainer.classList.contains('open');
+            
+            // Chiude tutte le altre FAQ aperte
+            document.querySelectorAll('.faq').forEach(el => el.classList.remove('open'));
+            
+            // Toggle per la FAQ corrente
+            if (!isOpen) {
+                faqContainer.classList.add('open');
+            }
         });
     });
 
-    document.getElementById('quoteForm').addEventListener('submit', (event) => {
-        event.preventDefault();
-        event.currentTarget.querySelectorAll('input, select, textarea, button').forEach(el => el.disabled = true);
-        document.getElementById('success').classList.remove('hidden');
+   // Form Submit handling per Netlify
+const quoteForm = document.getElementById('quoteForm');
+const successMsg = document.getElementById('success');
+
+if (quoteForm) {
+    quoteForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(quoteForm);
+
+        fetch('/', {
+            method: 'POST',
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString()
+        })
+        .then(() => {
+            successMsg.classList.remove('hidden');
+            quoteForm.reset();
+        })
+        .catch((error) => console.error('Errore nell\'invio:', error));
     });
+}
 </script>
 
 </body>
