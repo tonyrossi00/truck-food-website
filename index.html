@@ -586,89 +586,65 @@
         <p class="text-[10px] font-black uppercase tracking-[.25em] text-black/40 mt-8">Cliente StreetGourmet · Noleggio Truck</p>
     </div>
 </section>
-<!-- QUOTE -->
-<section id="preventivo" class="py-24 lg:py-32 bg-ink text-white">
-    <div class="max-w-6xl mx-auto px-5 lg:px-8">
-        <div class="grid lg:grid-cols-5 gap-14 items-start">
-            <div class="lg:col-span-2 reveal">
-                <span class="text-[10px] font-black uppercase tracking-[.28em] text-[#d7ab6c]">06 · Preventivo</span>
-                <h2 class="display text-4xl lg:text-6xl mt-4 leading-tight">Costruiamo<br><em>il tuo evento.</em></h2>
-                <p class="text-white/50 text-sm leading-7 mt-6">
-                    Raccontaci cosa hai in mente: un evento nella nostra location sul fiume o l'affitto del food truck? Ti ricontatteremo con una proposta personalizzata.
-                </p>
+<form id="quoteForm" name="preventivi" method="POST" data-netlify="true" class="bg-white text-ink rounded-[2rem] p-7 md:p-9 space-y-5 shadow-2xl">
+    <!-- Campo nascosto fondamentale per Netlify -->
+    <input type="hidden" name="form-name" value="preventivi" />
 
-                <div class="mt-10 space-y-4 text-sm text-white/65">
-                    <div class="flex gap-3"><i class="fa-solid fa-check text-bronze mt-1"></i> Location estiva sul fiume disponibile</div>
-                    <div class="flex gap-3"><i class="fa-solid fa-check text-bronze mt-1"></i> Noleggio Food Truck (Dry Hire o Full Service)</div>
-                    <div class="flex gap-3"><i class="fa-solid fa-check text-bronze mt-1"></i> Adatto per 30–100 ospiti</div>
-                </div>
-            </div>
-
-            <div class="lg:col-span-3 reveal">
-                <!-- FORM AGGIORNATO PER NETLIFY -->
-                <form id="quoteForm" name="preventivi" method="POST" data-netlify="true" class="bg-white text-ink rounded-[2rem] p-7 md:p-9 space-y-5 shadow-2xl">
-                    <!-- Campo nascosto per Netlify -->
-                    <input type="hidden" name="form-name" value="preventivi" />
-
-                    <div class="grid sm:grid-cols-2 gap-5">
-                        <div>
-                            <label class="label">Nome *</label>
-                            <input required type="text" name="nome" placeholder="Mario Rossi" class="field">
-                        </div>
-                        <div>
-                            <label class="label">Telefono / Email *</label>
-                            <input required type="text" name="contatto" placeholder="333... / email" class="field">
-                        </div>
-                    </div>
-
-                    <div class="grid sm:grid-cols-2 gap-5">
-                        <div>
-                            <label class="label">Servizio Richiesto</label>
-                            <select name="servizio" class="field">
-                                <option>Evento sul Fiume (Location)</option>
-                                <option>Affitto Food Truck (Dry Hire)</option>
-                                <option>Evento Corporate / Brand</option>
-                                <option>Altro</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="label">Ospiti Previsti</label>
-                            <select name="ospiti" class="field">
-                                <option>da 20 a 50</option>
-                                <option>da 50 a 100</option>
-                                <option>100+</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="grid sm:grid-cols-2 gap-5">
-                        <div>
-                            <label class="label">Data Evento</label>
-                            <input type="date" name="data_evento" class="field">
-                        </div>
-                        <div>
-                            <label class="label">Location (Se noleggio truck)</label>
-                            <input type="text" name="location" placeholder="Città / Indirizzo" class="field">
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="label">Raccontaci il progetto</label>
-                        <textarea name="messaggio" rows="4" placeholder="Descrivi il tuo evento o le tue esigenze di noleggio..." class="field resize-none"></textarea>
-                    </div>
-
-                    <button type="submit" class="w-full bg-ink text-white hover:bg-bronze py-4 rounded-xl text-[10px] font-black uppercase tracking-[.2em] transition">
-                        Invia richiesta <i class="fa-solid fa-arrow-right ml-2"></i>
-                    </button>
-
-                    <div id="success" class="hidden text-center bg-green-50 text-green-800 rounded-xl p-4 text-sm">
-                        <i class="fa-solid fa-circle-check mr-2"></i> Richiesta ricevuta. Ti ricontatteremo al più presto.
-                    </div>
-                </form>
-            </div>
+    <div class="grid sm:grid-cols-2 gap-5">
+        <div>
+            <label class="label">Nome *</label>
+            <input required type="text" name="nome" placeholder="Mario Rossi" class="field">
+        </div>
+        <div>
+            <label class="label">Telefono / Email *</label>
+            <input required type="text" name="contatto" placeholder="333... / email" class="field">
         </div>
     </div>
-</section>
+
+    <div class="grid sm:grid-cols-2 gap-5">
+        <div>
+            <label class="label">Servizio Richiesto</label>
+            <select name="servizio" class="field">
+                <option>Evento sul Fiume (Location)</option>
+                <option>Affitto Food Truck (Dry Hire)</option>
+                <option>Evento Corporate / Brand</option>
+                <option>Altro</option>
+            </select>
+        </div>
+        <div>
+            <label class="label">Ospiti Previsti</label>
+            <select name="ospiti" class="field">
+                <option>da 20 a 50</option>
+                <option>da 50 a 100</option>
+                <option>100+</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-5">
+        <div>
+            <label class="label">Data Evento</label>
+            <input type="date" name="data_evento" class="field">
+        </div>
+        <div>
+            <label class="label">Location (Se noleggio truck)</label>
+            <input type="text" name="location" placeholder="Città / Indirizzo" class="field">
+        </div>
+    </div>
+
+    <div>
+        <label class="label">Raccontaci il progetto</label>
+        <textarea name="messaggio" rows="4" placeholder="Descrivi il tuo evento o le tue esigenze di noleggio..." class="field resize-none"></textarea>
+    </div>
+
+    <button type="submit" class="w-full bg-ink text-white hover:bg-bronze py-4 rounded-xl text-[10px] font-black uppercase tracking-[.2em] transition">
+        Invia richiesta <i class="fa-solid fa-arrow-right ml-2"></i>
+    </button>
+
+    <div id="success" class="hidden text-center bg-green-50 text-green-800 rounded-xl p-4 text-sm">
+        <i class="fa-solid fa-circle-check mr-2"></i> Richiesta ricevuta. Ti ricontatteremo al più presto.
+    </div>
+</form>
 <!-- FAQ -->
 <section id="faq" class="py-24 lg:py-32">
     <div class="max-w-4xl mx-auto px-5 lg:px-8">
